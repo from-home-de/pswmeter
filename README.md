@@ -33,20 +33,21 @@ The first two options, `containerElement` and `passwordInput`, are **required**.
 
 Customize the **pswmeter** by adding more properties inside the function's arguments. These are the available properties you can use:
 
-| Option | Default value | Value type | Required | Explanation |
-| :------------ | :------------ | :------------ | :------------ | :------------ |
-| containerElement | - | String | Yes | ID selector. For example: '#pswmeter' |
-| passwordInput | - | String | Yes | ID selector. For example: '#psw-input' |
-| height | 4 | Number | No | - |
-| borderRadius | 2 | Number | No | - |
-| pswMinLength | 8 | Number | No | - |
-| colorScore1 | #ff7700 | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
-| colorScore2 | #ffff00 | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
-| colorScore3 | #aeff00 | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
-| colorScore4 | #00ff00 | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
-| showMessage | false | Boolean | No | By default this functionality is disabled, if you want to show messages you have to set this property to `true` |
-| messageContainer | - | String | No | If you set `showMessage` to `true` **you must** indicate the ID selector for the container that will show messages. |
-| messagesList | ['No data', 'Too simple', 'Simple', 'Thats OK', 'Great password!'] | Array | No | The first 5 items inside this array will override the default values in order. The first item is shown when the password's score is equal to 0, the second item is shown when the password's score is equal to 1, and so on. |
+| Option           | Default value                                                      | Value type | Required | Explanation |
+|:-----------------|:-------------------------------------------------------------------| :------------ | :------------ | :------------ |
+| containerElement | #pswmeter                                                          | String | Yes | ID selector. For example: '#pswmeter' |
+| passwordInput    | #psw-input                                                         | String | Yes | ID selector. For example: '#psw-input' |
+| height           | 4                                                                  | Number | No | - |
+| borderRadius     | 2                                                                  | Number | No | - |
+| pswMinLength     | 8                                                                  | Number | No | - |
+| backgroundColor  | #eee                                                               | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
+| colorScore1      | #ff7700                                                            | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
+| colorScore2      | #ffff00                                                            | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
+| colorScore3      | #aeff00                                                            | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
+| colorScore4      | #00ff00                                                            | String | No | Hex, RGB or named color values. For example: '#000', 'rgb(0,0,0)' or 'black' |
+| showMessage      | false                                                              | Boolean | No | By default this functionality is disabled, if you want to show messages you have to set this property to `true` |
+| messageContainer | #psw-message                                                                  | String | No | If you set `showMessage` to `true` **you must** indicate the ID selector for the container that will show messages. |
+| messagesList     | ['No data', 'Too simple', 'Simple', 'Thats OK', 'Great password!'] | Array | No | The first 5 items inside this array will override the default values in order. The first item is shown when the password's score is equal to 0, the second item is shown when the password's score is equal to 1, and so on. |
 
 ## Events
 
@@ -67,18 +68,6 @@ For now there is only one method available:
 | Method | Usage | Returned possible values | Explanation |
 | :------------ | :------------ | :------------ | :------------ |
 | getScore | `myPassMeter.getScore()` | `0`, `1`, `2`, `3` or `4` | When called, this method returns a Number with the current score of the selected password field. |
-
-## Updates
-
-**v1.1** ::: Aug 23, 2019
-- Added: custom event dispatching on updateScore function.
-- Added: getScore() function that return the current score of the selected password field.
-- Added: return anonymous object with the containerElement (to be able to listening for custom events) and getScore function.
-- Updated: docs folder for github repo.
-- Updated: README.md file and documentation.
-
-**v1.0** ::: Aug 14, 2019
-Initial release.
 
 ## Contributions
 
